@@ -1,0 +1,290 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+h1 { font-size: 3.5em;}
+h2 { font-size: 2.7em;}
+h3 { font-size: 2em;}
+p { font-size: 1.25em;}
+ul { list-style: none;}
+
+.explora {
+    font-size: 2.2em;
+    background-color: slateblue; 
+    font-weight: bold;
+    border: 2px solid;
+    padding: 20px 40px;
+    box-shadow: 5px 5px 20px blue;
+    color: white;
+    border-radius: 20px;
+}
+
+.explora:hover {
+    background-color: rgb(90, 72, 209);
+    color: black;
+}
+
+.archivos {
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: aqua;
+    padding: 10px 25px;
+    box-shadow:3px 3px 12px deepskyblue;
+    border: 2px solid white;
+    border-radius: 15px;
+}
+
+.archivos:hover {
+    background-color: rgb(44, 175, 175);
+    color: white;
+}
+
+.inicio {
+    max-width: 1400px;
+    margin: auto;
+}
+
+.color-acento {
+    color: aqua;
+}
+
+header {
+    background-color: aqua;
+}
+
+header .logo {
+    margin: 0;
+    padding: 25px 30px;
+    font-weight: bold;
+    color: rgb(26, 83, 83);
+    font-size: 1.95em;
+    text-shadow: 2px 2px 5px rgb(22, 86, 86);
+}
+
+header .inicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+header a {
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+header a:hover {
+    color: white;
+}
+
+#portada {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    color: white;
+    background-image: linear-gradient(
+        0deg,
+         rgba(0,0,0,0.5),
+         rgba(0,0,0,0.5)), 
+         url(media/inicio.jpg);
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-position: center center;
+}
+
+#nosotros {
+    background-color: rgb(235, 253, 253);
+    margin-top: -15px;
+}
+
+#nosotros .inicio {
+    text-align: center;
+    padding: 200px 12px;
+}
+
+#contenido {
+    background-color: rgb(8, 8, 55);
+    color: white;
+    text-align: center;
+}
+
+#contenido .inicio {
+    padding: 150px 0;
+}
+
+#contenido h2 {
+    margin-top: 0;
+    font-size: 3.2em;
+}
+
+#contenido p {
+    display: none;
+}
+
+#contenido .juegos, .apps, .libros {
+    background-position: center center;
+    background-size: cover;
+    padding: 30px;
+    margin: 20px;
+    border-radius: 30px;
+    box-shadow: 15px 15px 25px rgb(1, 1, 1);
+    border: 3px solid black;
+}
+
+#contenido .nota, ul {
+    margin-top: 0;
+    display: block;
+}
+
+.juegos {
+    background-image: linear-gradient(
+        0deg,
+         rgba(0,0,0,0.5),
+         rgba(0,0,0,0.5)), 
+         url(media/juegos.jpg);
+
+}
+
+.apps {
+    background-image: linear-gradient(
+        0deg,
+         rgba(0,0,0,0.5),
+         rgba(0,0,0,0.5)), 
+         url(media/apps.jpg);
+}
+
+.libros {
+    background-image: linear-gradient(
+        0deg,
+         rgba(0,0,0,0.5),
+         rgba(0,0,0,0.5)), 
+         url(media/libros.jpg);
+}
+
+#contenido ul {
+    margin-top: 0;
+    padding-bottom: 50px;
+}
+
+footer {
+    background-color: rgb(64, 60, 60);
+}
+
+footer p {
+    margin: 0;
+    padding: 12px;
+    color: white;
+}
+
+footer .inicio {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+
+@media (min-width:720px) {
+
+    header{
+        position: fixed;
+        width: 100%;
+    }
+    header .inicio{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+
+    #portada h1{
+        font-size: 6em;
+    }
+
+    #nosotros .inicio{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #nosotros .texto{
+        width: 50%;
+        text-align: initial;
+        padding-left: 30px;
+        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #nostros h2{
+        margin-top: 0;
+    }
+
+    #nosotros .contenedorimg{
+         background-image: url(media/inicio.jpg);
+         background-size: cover;
+         background-position: center center;
+         height: 500px;
+         width: 450px;
+    }
+
+    #contenido .cartas{
+        display: flex;
+        justify-content: center;
+    }
+
+    #contenido p{
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    #contenido h3{
+        margin-top: 0;
+    }
+
+    #contenido .juegos, .apps, .libros{
+        padding: 50px;
+    }
+
+    footer .inicio{
+        justify-content: flex-end;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
